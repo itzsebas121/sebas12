@@ -28,9 +28,9 @@
 
     </header>
     <div class="hero-body">
-        Hola soy sebas
+      
         <div class="pending-registrations">
-            <h2><i class="fa-solid fa-user-clock"></i>Registros pendientes</h2>
+            <h2><i class="fa-solid fa-user-clock"></i>Registros pendientes soy sebas</h2>
             <select name="" class="cmb-registration" onchange="filtrarPorTipo()">
                 <option value="Todos los registros pendientes">Todos los registros pendientes</option>
                 <option value="Profesor">Profesores</option>
