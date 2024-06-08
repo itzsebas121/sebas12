@@ -1,0 +1,191 @@
+.hero-body {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 10px;
+}
+
+.pending-registrations {
+    padding: 15px;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.create-user {
+    padding: 10px;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+    width: 98%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #434343;
+    margin: 10px 20px;
+}
+
+.cmb-registration {
+    margin: 20px 20px 50px 10px;
+    padding: 5px 15px;
+    border: 1px #ccc solid;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    text-align: start;
+}
+th, td{
+    padding: 10px;
+}
+tr{
+    border-bottom: 1px #ccc solid;
+    text-align: start;
+}
+table i{
+    cursor: pointer;
+    margin: 10px 10px 10px 0px;
+    text-align: center;
+}
+.view{
+    color: rgb(55, 55, 220);
+}
+.remove{
+    color: red;
+}
+.check-list{
+    color: rgb(41, 161, 41);
+}
+
+
+.label{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-areas: "input";
+    margin-bottom: 35px;
+}
+.input{
+    grid-area: input;
+    width: 100%;
+    font:inherit;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: .7rem 1.5rem;
+}
+
+.label_name{
+    color: gray;
+    grid-area: input;
+    z-index: 100;
+    width: 100%;
+    margin-left: .5rem;
+    padding: 0 .5rem;
+    align-self: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: transform .2rem;
+    transform-origin:center left ;
+}
+.input:where(:focus, 
+:not(:placeholder-shown))+.label_name{
+    font-size: 1.2rem;
+    transform: translateY(-80%) scale(.7);
+    background-color: transparent;
+}
+.container .form{
+    margin-top: 30px;
+}
+
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+
+}
+.form .gender-box{
+    margin-top:20px ;
+    margin-bottom: 20px;
+}
+
+.form button{
+    height: 45px;
+    width: 45%;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #434343;
+    border-radius: 6px;
+}
+.form button:hover{
+    background-color: #ad272e;
+}
+.text{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.professor{
+    display: none;
+}
+.select-box select{
+    height: 45px;
+    width: 100%;
+    color: gray;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+.professor.active{
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+}
+.student.active .input-box{
+width: 80%;
+}
+.student.active{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.student{
+    display: none;
+}
+.professor.active .label{
+    margin-bottom: 0px;
+    
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1080px) {
+    .hero-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "uno"
+            "dos";
+        gap: 1rem;
+    }
+
+    .pending-registrations {
+        grid-area: uno;
+    }
+
+    .create-user {
+        grid-area: dos;
+    }
+}
